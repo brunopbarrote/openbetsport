@@ -4,6 +4,9 @@
   "description": "Simple globoesporte placar crawler",
   "main": "app.js",
   "author": "Bruno Polito Barrote",
+  "scripts": {
+	"start": "node app.js"
+  },
   "dependencies": {
     "url-parse": "^1.0.5",
     "express"    : "latest",
