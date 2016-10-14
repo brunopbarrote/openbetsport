@@ -13,6 +13,7 @@ var methodOverride = require('method-override');
 // configuration ===============================================================
 mongoose.connect(database.remoteUrl); 	// Connect to local MongoDB instance. A remoteUrl is also available (mlab.com)
 
+app.use(express.static(path.join(__dirname, 'public/spa/views')));
 app.use(express.static(path.join(__dirname, 'public')));		// set the static files location /public/img will be /img for users
 app.use(morgan('dev')); // log every request to the console
 app.use(methodOverride('X-HTTP-Method-Override')); // override with the X-HTTP-Method-Override header in the request

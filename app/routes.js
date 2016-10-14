@@ -3,6 +3,10 @@ var cheerio = require('cheerio');
 var ge = require('./helpers/ge');
 
 module.exports = function(app) {
+    app.get('/football-data.events/api_token.txt', function (req, res){
+
+
+    });
 
     app.get('/api/resultadosbr', function(req, res) {
         request('http://globoesporte.globo.com/placar-ge/hoje/', function(error, response, html) {
