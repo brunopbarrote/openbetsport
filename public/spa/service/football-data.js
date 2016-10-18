@@ -13,7 +13,7 @@
 
           $http({
               method: 'GET',
-              url: 'http://api.football-data.org/v1/teams/' + teamID + '/fixtures',
+              url: 'https://api.football-data.org/v1/teams/' + teamID + '/fixtures',
               headers: {
                   'X-Auth-Token': '88b3c85d720d49019f4fb8acbcd0b2aa'
               }
@@ -32,7 +32,7 @@
 
             $http({
                 method: 'GET',
-                url: 'http://api.football-data.org/v1/teams/' + teamID + '/players',
+                url: 'https://api.football-data.org/v1/teams/' + teamID + '/players',
                 headers: {
                     'X-Auth-Token': '88b3c85d720d49019f4fb8acbcd0b2aa'
                 }
@@ -51,7 +51,7 @@
 
             $http({
                 method: 'GET',
-                url: 'http://api.football-data.org/v1/teams/' + teamID,
+                url: 'https://api.football-data.org/v1/teams/' + teamID,
                 headers: {
                     'X-Auth-Token': '88b3c85d720d49019f4fb8acbcd0b2aa'
                 }
@@ -75,7 +75,7 @@
 
             $http({
                 method: 'GET',
-                url: 'http://api.football-data.org/v1/fixtures',
+                url: 'https://api.football-data.org/v1/fixtures',
                 headers: {
                     'X-Auth-Token': '88b3c85d720d49019f4fb8acbcd0b2aa'
                 },
