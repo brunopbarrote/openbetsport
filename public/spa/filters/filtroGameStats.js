@@ -2,12 +2,18 @@
     'use strict';
     angular.module('app').filter('filtroGameStats', function() {
         return function(item) {
+            var retorno = '';
             if (item == 'SCHEDULED' || item == 'TIMED') {
-                return 'EM BREVE';
+                retorno = 'EM BREVE';
             } else if (item == 'IN_PLAY') {
-                return "<p class='c-black f-500'>EM ANDAMENTO<b>";
+                retorno = "<p class='c-black f-500'>EM ANDAMENTO<b>";
+            } else if (item == 'FINISHED') {
+                retorno = "<p class='c-black f-500'>ENCERRADA<b>";
             }
-            return item;
+            else{
+              retorno = item;
+            }
+            return retorno;
         };
     });
 })();

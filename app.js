@@ -18,7 +18,6 @@ app.use(express.static(path.join(__dirname, 'public')));		// set the static file
 app.use(morgan('dev')); // log every request to the console
 app.use(methodOverride('X-HTTP-Method-Override')); // override with the X-HTTP-Method-Override header in the request
 
-
 // routes ======================================================================
 require('./app/routes.js')(app);
 
