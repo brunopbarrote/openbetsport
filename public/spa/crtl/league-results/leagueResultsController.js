@@ -11,7 +11,7 @@
 
         function getLeagueGames() {
             var leagueCode = $routeParams.leagueCode;
-
+            console.log(leagueCode);
             footballDataService.getByLeague(leagueCode).then(function(json) {
                 $scope.games = json.fixtures;
                 console.log(json);

@@ -75,10 +75,11 @@
 
             $http({
                 method: 'GET',
-                url: 'http://api.football-data.org/v1/fixtures?league=PL',
+                url: 'http://api.football-data.org/v1/fixtures',
                 headers: {
                     'X-Auth-Token': '88b3c85d720d49019f4fb8acbcd0b2aa'
-                }
+                },
+               params: params
             }).success(function(data) {
                 deferred.resolve(data);
             }).error(function(msg) {
