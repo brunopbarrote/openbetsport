@@ -6,9 +6,9 @@
             if (item == 'SCHEDULED' || item == 'TIMED') {
                 retorno = 'EM BREVE';
             } else if (item == 'IN_PLAY') {
-                retorno = "<p class='c-black f-500'>EM ANDAMENTO<b>";
+                retorno = "<p class='c-black f-500'>EM ANDAMENTO</p>";
             } else if (item == 'FINISHED') {
-                retorno = "<p class='c-black f-500'>ENCERRADA<b>";
+                retorno = "<p class='c-black f-500'>ENCERRADA</p>";
             }
             else{
               retorno = item;

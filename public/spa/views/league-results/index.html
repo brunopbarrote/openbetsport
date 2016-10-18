@@ -4,7 +4,7 @@
             <thead class="t-uppercase">
                 <tr>
                     <th class="c-gray">Home Team</th>
-                    <th class="c-gray"></th>
+                    <th class="c-gray">X</th>
                     <th class="c-gray">Away Team</th>
                     <th class="c-gray">Data</th>
                     <th class="c-gray">Status</th>
@@ -15,8 +15,8 @@
                     <td ng-bind-html="game.homeTeamName | filtroTeam: game._links.homeTeam.href"></td>
                     <td>{{game.result.goalsHomeTeam}} X {{game.result.goalsAwayTeam}}</td>
                     <td ng-bind-html="game.awayTeamName | filtroTeam: game._links.awayTeam.href"></td>
-                    <td>{{game.date | date : format : timezone}}</td>
-                    <td>{{game.status | filtroGameStats}}</td>
+                    <td>{{game.date | date}}</td>
+                    <td ng-bind-html="game.status | filtroGameStats"></td>
                 </tr>
             </tbody>
         </table>
