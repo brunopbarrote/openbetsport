@@ -1,6 +1,6 @@
 module.exports.getJogosBr = function ($) {
         var arrayJogos = [];
-        var arrayConfrontos = ['.ao-vivo', '.futuro'];
+        var arrayConfrontos = ['.ao-vivo', '.futuro', '.passado'];
 
         for (i = 0; i < arrayConfrontos.length; i++) {
             $('section' + arrayConfrontos[i]).find('.secao-campeonato > article').each(function() {

@@ -1,0 +1,67 @@
+<header class="page-header">
+    <h3>{{data.name}}<small>{{data.shortName}}</small></h3>
+</header>
+
+<div class="tile" id="profile-main">
+    <div class="pm-overview c-overflow-dark">
+        <div class="pmo-pic">
+            <div class="p-relative">
+                <a href="{{data.crestUrl}}">
+                    <img class="img-responsive" src="{{data.crestUrl}}" alt="{{data.name}}">
+                </a>
+            </div>
+        </div>
+
+        <div class="pmo-block pmo-contact hidden-xs">
+            <h2>{{data.name}}</h2>
+            <ul>
+                <li><i class="zmdi zmdi-money-box"></i> Valor Mercado: {{data.squadMarketValue}}</li>
+            </ul>
+        </div>
+
+        <div class="pmo-block pmo-items hidden-xs">
+        </div>
+    </div>
+
+    <div class="pm-body clearfix">
+        <ul class="tab-nav tn-justified">
+            <li class="active"><a href="javascript:void(0)">About</a></li>
+        </ul>
+        <div class="pmb-block">
+            <div class="pmbb-header">
+                <h2><i class="zmdi zmdi-equalizer m-r-5"></i> Players</h2>
+            </div>
+            <div class="pmbb-body p-l-100">
+              <div class="t-header">
+                  <div class="th-title">{{data.name}}<small> squad players, ordered by name.</small></div>
+              </div>
+              <div class="table-responsive m-t-20">
+                  <table class="table table-condensed">
+                      <thead>
+                          <tr>
+                              <th>Name</th>
+                              <th>Position</th>
+                              <th>Number</th>
+                              <th>Date Birthday</th>
+                              <th>Nationality</th>
+                              <th>Contract Expires</th>
+                              <th>Market Value</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <tr ng-repeat="player in (players | filterByName: 'name')">
+                              <th>{{player.name}}</th>
+                              <th>{{player.position}}</th>
+                              <th>{{player.jerseyNumber}}</th>
+                              <th>{{player.dateOfBirth | date : format : timezone}}</th>
+                              <th>{{player.nationality}}</th>
+                              <th>{{player.contractUntil | date : format : timezone}}</th>
+                              <th>{{player.marketValue}}</th>
+                          </tr>
+                      </tbody>
+                  </table>
+              </div>
+            </div>
+        </div>
+    </div>
+</div>
