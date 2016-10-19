@@ -19,6 +19,7 @@ app.use(morgan('dev')); // log every request to the console
 app.use(methodOverride('X-HTTP-Method-Override')); // override with the X-HTTP-Method-Override header in the request
 
 // routes ======================================================================
+require('./app/api/football.js')(app);
 require('./app/routes.js')(app);
 
 // Return index handler. and angular will be responsable for routes.

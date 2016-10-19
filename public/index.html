@@ -48,10 +48,20 @@
                     <img src="/img/profile-pic.jpg" alt="">
 
                     <span class="f-11">
-                         <span class="d-block">Agência Open Sporting Bet</span>
+                       <span class="d-block">Agência Open Sporting Bet</span>
                     <small class="text-lowercase">@OpenSportingBet</small>
                     </span>
                 </a>
+            </li>
+
+            <li class="sm-sub" ng-repeat="(key, value) in menuItem | groupBy: 'country'">
+                <a href="">
+                    <i class="zmdi zmdi zmdi-view-list"></i>
+                    <span ng-bind="key"></span>
+                </a>
+                <ul>
+                    <li ng-repeat="league in value"><a href="/league/matches/{{league.leagueCode}}">{{league.league}}</a></li>
+                </ul>
             </li>
         </ul>
     </aside>
@@ -138,11 +148,13 @@
     <script type="text/javascript" src="https://code.angularjs.org/1.5.8/angular-route.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-sanitize.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/i18n/angular-locale_de-de.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-filter/0.5.11/angular-filter.min.js"></script>
     <script src="/spa/app.js"></script>
     <script src="/spa/crtl/home/homeController.js"></script>
     <script src="/spa/crtl/league-results/leagueResultsController.js"></script>
     <script src="/spa/crtl/team-detail/teamDetailController.js"></script>
     <script src="/spa/service/football-data.js"></script>
+    <script src="/spa/service/mongoService.js"></script>
     <script src="/spa/filters/filtroGameStats.js"></script>
     <script src="/spa/filters/filterDate.js"></script>
     <script src="/spa/filters/filtroTeam.js"></script>

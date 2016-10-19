@@ -2,6 +2,7 @@ var request = require('request');
 var cheerio = require('cheerio');
 var ge = require('./helpers/ge');
 var http = require('http');
+var Leagues = require('./models/league');
 
 module.exports = function(app) {
     app.get('/api/resultadosbr', function(req, res) {
