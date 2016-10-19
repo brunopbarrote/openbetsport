@@ -19,6 +19,8 @@
     }]);
 
     angular.module('app').run(function($rootScope, mongoService) {
+        var socket = io();
+
         $rootScope.menuItem = {};
 
         mongoService.getMenu().then(function(json) {
