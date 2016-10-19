@@ -1,6 +1,6 @@
 (function() {
     'use strict';
-    angular.module('app', ['ngRoute', 'ngSanitize', 'angular.filter']).config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
+    angular.module('app', ['ngRoute', 'ngSanitize', 'angular.filter', 'angular-linq']).config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
 
         $routeProvider.when('/', {
                 templateUrl: '/spa/views/home/index.html',
